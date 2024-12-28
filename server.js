@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const express = require('express');
 const connectDB = require('./config/database');
 const cors = require('cors');
@@ -121,5 +120,3 @@ const app = express();
       app.get('/', (req, res) => res.send('API Running'));
 
     const PORT = process.env.PORT || 5000;
->>>>>>> b260c03 (bakcend push)
-    app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
