@@ -47,7 +47,7 @@ const app = express();
             return res.status(400).json({ msg: 'No file uploaded' });
          }
          console.log('File received by server:', req.file);
-           const imageUrl = `http://localhost:5000/${req.file.path}`.replace(/\\/g, '/');
+           const imageUrl = `${process.env.REACT_APP_BASE_API_URL}/${req.file.path}`.replace(/\\/g, '/');
         console.log("Generated Image URL:",imageUrl);
         res.json({ imageUrl });
    });
